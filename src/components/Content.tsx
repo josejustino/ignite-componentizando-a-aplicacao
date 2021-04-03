@@ -33,9 +33,7 @@ export function Content({ selectedGenreId, selectedGenre }: GenreProps) {
     api.get<MovieProps[]>(`movies/?Genre_id=${selectedGenreId}`).then(response => {
       setMovies(response.data);
     });
-  }, [selectedGenreId]);
-
-  
+  }, [selectedGenreId]);  
 
   return (
     <div className="container">
